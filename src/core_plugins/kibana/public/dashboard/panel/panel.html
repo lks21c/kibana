@@ -1,11 +1,10 @@
 <div class="panel panel-default" ng-class="{'panel--edit-mode': !isViewOnlyMode()}" ng-switch on="panel.type" ng-if="savedObj || error">
-  <div class="panel-heading">
+  <div class="panel-heading" >
     <span
       data-test-subj="dashboardPanelTitle"
       class="panel-title"
       aria-label="{{:: 'Dashboard panel: ' + savedObj.title }}"
     >
-      {{::savedObj.title}}
     </span>
     <div class="kuiMicroButtonGroup">
       <a
@@ -19,6 +18,7 @@
           aria-hidden="true"
           class="kuiIcon"
           ng-class="{'fa-expand': !isExpanded, 'fa-compress': isExpanded}"
+          style="display:none"
         ></span>
       </a>
 
